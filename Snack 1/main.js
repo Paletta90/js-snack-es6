@@ -29,7 +29,7 @@ let arrayBike = [
 // Mando in stampa tutti gli oggetti bici
 for(let y = 0; y < arrayBike.length; y++){
 
-    let {modello, peso} = arrayBike[y];
+    const {modello, peso} = arrayBike[y];
     container.innerHTML += `<h3>Bici numero ${y + 1}: Modello:${modello} Peso:${peso}</h3>`
 }
 
@@ -41,7 +41,7 @@ let minWeight = arrayBike[0].peso;
 for(let i = 0; i < arrayBike.length; i++){
 
     // Destructuring
-    let {modello, peso} = arrayBike[i];
+    const {modello, peso} = arrayBike[i];
 
     // Condizione if che mi permette di trovare la bici con il peso minore
     if(minWeight >= peso){
