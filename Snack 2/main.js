@@ -39,14 +39,30 @@ let arrayClub = [
     }
 ];
 
+// Creo numeri random per puntifatti e fallisubiti
 for(let i = 0; i < arrayClub.length; i++){
 
-    let {puntifatti, fallisubiti} = arrayClub[i];
-    
-    console.log(arrayClub[i])
+    arrayClub[i].fallisubiti = numRandom1toX(200);
+    arrayClub[i].puntifatti = numRandom1toX(100);
+
 }
 
-console.log(arrayClub)
+// Array che conterra i nuovi oggetti con nome e falli subiti
+let newArray = [];
+
+// Creo i nuovi oggetti
+for(let y = 0; y < arrayClub.length; y++){
+
+    let {nome, fallisubiti} = arrayClub[y];
+
+    let newOne = {nome, fallisubiti};
+    
+    newArray.push(newOne);
+}
+
+console.log( newArray )
+
+
 // Funzione che crea un num random da 0 a x
 function numRandom1toX(x){
 
