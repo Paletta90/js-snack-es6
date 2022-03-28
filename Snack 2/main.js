@@ -50,7 +50,8 @@ for(let i = 0; i < arrayClub.length; i++){
     container.innerHTML +=`<div>Nome squadra: ${nome} Falli Subiti: ${fallisubiti} Punti: ${puntifatti}</div>`
 }
 
-container.innerHTML +=`<h2>Nuovo array</h2>`
+container.innerHTML +=`<h2>Classifica falli subiti</h2>`
+
 // Array che conterra i nuovi oggetti con nome e falli subiti
 let newArray = [];
 
@@ -68,17 +69,19 @@ for(let y = 0; y < arrayClub.length; y++){
     
 }
 
+// Riordino l'array in base ai falli subiti dal maggiore al minore
+newArray.sort( ( a, b) => {
+    return b.fallisubiti - a.fallisubiti;
+});
+
 // Stampo i nuovi oggetti
 for(let z = 0; z < arrayClub.length; z++){
 
     let {nome, fallisubiti} = newArray[z]
 
-    container.innerHTML += `<div>Nome squadra:${nome} Falli Subiti:${fallisubiti}</div>`
+    container.innerHTML += `<div>${z + 1} - Nome squadra:${nome} Falli Subiti:${fallisubiti}</div>`
     
 }
-
-
-
 
 
 // let newArray = [];
@@ -99,6 +102,7 @@ for(let z = 0; z < arrayClub.length; z++){
 // }
 // console.log(newArray)
 // Funzione che crea un num random da 0 a x
+
 function numRandom1toX(x) {
 
     let num;
