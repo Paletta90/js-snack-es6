@@ -1,6 +1,6 @@
 // Array di nomi
 const myArray = ['Michele', 'Fabio', 'Roberto', 'Giovanni', 'Simone', 'Chiara'];
-//Array contenente il nuovo array
+//Array contenente i nuovi array
 let arrayForEach = [];
 let arrayFilter = [];
 // variabili min e max
@@ -43,16 +43,16 @@ myArray.forEach(
 console.log(arrayForEach);
 
 // Metodo con Filter()
-myArray.filter(
-    (element, index) => {
+arrayFilter = myArray.filter(
 
-        // Se index è tra min e max aggiungo l'elemento
-        if(index >= min && index <= max){
-            arrayFilter.push(
-                element
-            )
-        }
+    (element, index) => ( index >= min && index <= max )
+    // (element, index) => {
 
-    }
+    //     // Se index è tra min e max aggiungo l'elemento
+    //     if(index >= min && index <= max){
+    //         return true;
+    //     }
+
+    // }
 );
 console.log(arrayFilter)

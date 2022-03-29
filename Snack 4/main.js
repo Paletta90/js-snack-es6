@@ -17,37 +17,37 @@ let bestStudents = [];
 let bestStudentsID = [];
 
 // Pusho tutti i nomi in maiuscolo in un array
-students.map(
-    (element) => nameStudents.push( String(element.name.toUpperCase()) )
+nameStudents = students.map(
+    (element) => String(element.name.toUpperCase()) 
 )
 console.log(nameStudents)
 
 // Pusho tutti gli studenti con voto maggiore di 70
-students.filter(
+bestStudents = students.filter( (element) => element.grades > 70
 
-    (element) => {
+    // (element) => {
 
-        if(element.grades > 70){
+    //     if(element.grades > 70){
 
-            bestStudents.push(element)
+    //         bestStudents.push(element)
 
-        }
-    }
+    //     }
+    // }
 
-)
+);
 console.log(bestStudents)
 
 // Pusho tutti gli studenti con voto maggiore di 70 e id > 120
-students.filter(
+bestStudentsID = students.filter( (element) => element.grades > 70 && element.id > 120
 
-    (element) => {
+    // (element) => {
 
-        if(element.grades > 70 && element.id > 120){
+    //     if(element.grades > 70 && element.id > 120){
 
-            bestStudentsID.push(element)
+    //         bestStudentsID.push(element)
 
-        }
-    }
+    //     }
+    // }
 
 )
 console.log(bestStudentsID)
